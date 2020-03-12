@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="it.polito.tdp.prova_SceneBuilder.FXMLController">
-    <children>
-        <Button fx:id="button" layoutX="126" layoutY="90" onAction="#handleButtonAction" text="Hello World!" />
-        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
-      <TextField layoutX="93.0" layoutY="42.0" promptText="Inserisci...." />
-    </children>
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.prova_SceneBuilder.FXMLController">
+   <top>
+      <Label text="Inserisci i tuoi dati" BorderPane.alignment="CENTER">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+   </top>
+   <center>
+      <VBox spacing="5.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox spacing="5.0">
+               <children>
+                  <Label text="Nome : " />
+                  <TextField fx:id="nometxt" />
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox spacing="5.0">
+               <children>
+                  <Label prefWidth="42.0" text="Età : " />
+                  <TextField fx:id="etatxt" />
+               </children>
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox alignment="TOP_RIGHT">
+               <children>
+                  <Button fx:id="Inviobtn" mnemonicParsing="false" onAction="#handleinvio" text="Invio" />
+               </children>
+            </HBox>
+            <Label fx:id="rispostatxt" />
+         </children>
+         <BorderPane.margin>
+            <Insets top="5.0" />
+         </BorderPane.margin>
+      </VBox>
+   </center>
+</BorderPane>
